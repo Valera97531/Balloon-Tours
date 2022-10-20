@@ -1,0 +1,281 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 16px;
+  -ms-text-size-abjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-abjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Inter;
+  font-display: swap;
+  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: Lato;
+  font-display: swap;
+  src: url("../fonts/Lato-ExtraBold.woff2") format("woff2"), url("../fonts/Lato-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: Lato;
+  font-display: swap;
+  src: url("../fonts/Lato-Bold.woff2") format("woff2"), url("../fonts/Lato-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Lato;
+  font-display: swap;
+  src: url("../fonts/Lato-Light.woff2") format("woff2"), url("../fonts/Lato-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: Lato;
+  font-display: swap;
+  src: url("../fonts/Lato-Regular.woff2") format("woff2"), url("../fonts/Lato-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Lato;
+  font-display: swap;
+  src: url("../fonts/Lato-Semibold.woff2") format("woff2"), url("../fonts/Lato-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@keyframes leftToRight {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.ibg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.ibg img {
+  display: none;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.btn {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+  background: #ffffff;
+  border-radius: 50px;
+}
+.btn > a {
+  display: block;
+  padding: 0.9375rem 2.5rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  letter-spacing: 5px;
+  color: #777777;
+}
+
+.burger {
+  position: fixed;
+  top: 6.25rem;
+  right: 6.25rem;
+  width: 4.375rem;
+  height: 4.375rem;
+  border-radius: 50%;
+  z-index: 100;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.burger__inner {
+  width: 1.875rem;
+  height: 1.375rem;
+  position: relative;
+}
+.burger__inner > span {
+  position: absolute;
+  width: 100%;
+  height: 0.125rem;
+  background: #000000;
+  top: 0;
+  left: 0;
+}
+.burger__inner:before, .burger__inner:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.125rem;
+  background: #000000;
+  left: 0;
+}
+.burger__inner:before {
+  bottom: 0;
+}
+.burger__inner:after {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+body {
+  padding: 3.125rem;
+  font-family: "Lato", sans-serif;
+}
+
+.wrapper {
+  height: 100%;
+}
+
+.page {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #F7F7F7;
+  position: relative;
+}
+
+.content {
+  flex: 1 1 auto;
+}
+
+.promo {
+  height: 95vh;
+  background: linear-gradient(90.05deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url("../img/promo/promo_bg.jpg") center/cover no-repeat;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+  position: relative;
+}
+.promo__logo {
+  max-width: 3.5rem;
+  max-height: 4.375rem;
+  position: absolute;
+  left: 3.125rem;
+  top: 3.125rem;
+}
+.promo__logo img {
+  width: 100%;
+  height: 100%;
+}
+.promo__inner {
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.promo__title {
+  line-height: 1.2;
+}
+.promo__title_main {
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  font-size: 3.125rem;
+  font-weight: 800;
+}
+.promo__title_secondary {
+  margin-top: 0.625rem;
+  margin-bottom: 3.125rem;
+  font-weight: 300;
+  font-size: 2.5rem;
+  letter-spacing: 5px;
+  display: block;
+  text-transform: lowercase;
+}
