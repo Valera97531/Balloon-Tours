@@ -1,0 +1,44 @@
+@import "../base/var";
+
+.burger {
+  position: fixed;
+  top: 10rem;
+  right: 10rem;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  z-index: 100;
+  background: $colorLight;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  &__inner {
+    width: 3rem;
+    height: 2.2rem;
+    position: relative;
+    & > span {
+      position: absolute;
+      width: 100%;
+      height: .2rem;
+      background: $colorDark;
+      top: 0;
+      left: 0;
+    }
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: .2rem;
+      background: $colorDark;
+      left: 0;
+    }
+    &:before {
+      bottom: 0;
+    }
+    &:after {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

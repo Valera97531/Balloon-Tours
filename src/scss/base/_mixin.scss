@@ -1,0 +1,7 @@
+@import "../base/var";
+
+@mixin linkStyle {
+  display: block;
+  color: $colorText;
+  text-transform: uppercase;
+}

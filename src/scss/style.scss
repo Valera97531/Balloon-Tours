@@ -1,35 +1,19 @@
-@import "reset";
+@import "libs/reset";
+
 @import "fonts";
+
 @import "base/var";
+@import "base/mixin";
 @import "base/animate";
 @import "base/ibg";
-@import "blocks/_blocks";
 
+@import "base/base";
 
-body {
-	padding: 5rem;
-	font-family: $fontMain;
-	color: $colorText;
-}
+@import "components/button";
+@import "components/title";
+@import "components/burger";
 
-.wrapper {
-	height: 100%;
-}
+@import "layout/promo";
+@import "layout/about";
 
-.page {
-	width: 100%;
-	min-height: 100%;
-	display: flex;
-	flex-direction: column;
-	background: #F7F7F7;
-	position: relative;
-}
-
-.content {
-	flex: 1 1 auto;
-}
-
-@import "blocks/promo";
-@import "blocks/about";
-
-@import "blocks/footer";
+@import "layout/footer";
