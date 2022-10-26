@@ -6,13 +6,14 @@
 @import "base/mixin";
 @import "base/animate";
 @import "base/ibg";
-
 @import "base/base";
 
 @import "components/button";
 @import "components/title";
+@import "components/text";
 @import "components/burger";
 
+@import "layout/grid";
 @import "layout/promo";
 @import "layout/about";
 

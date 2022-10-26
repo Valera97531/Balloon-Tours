@@ -1,9 +1,24 @@
+@import "../base/var";
+
 .about {
-  &__container {
-    padding: 8rem 17.8rem 5.4rem;
-  }
+  padding: 8rem 0rem 5.4rem 0rem;
   &__title {
     margin-bottom: 8rem;
     text-align: center;
+  }
+}
+
+.item-about {
+  &__title {
+    margin-bottom: 1rem;
+  }
+  &__text {
+    margin-bottom: 4rem;
+  }
+}
+
+.images-about {
+  &__image {
+    width: 300px;
   }
 }

@@ -4,7 +4,7 @@
 .btn {
   background: $colorLight;
   border-radius: 5rem;
-  transition: all .5s ease 0s;
+  transition: $transition;
   position: relative;
   &_animated {
     animation: btnToUp 1.4s ease .8s;
@@ -21,7 +21,7 @@
   }
   &:hover {
     transform: translateY(-.7rem);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0rem .4rem .4rem rgba(0, 0, 0, 0.5));
     &::before {
       transform: scale(1.4, 1.7);
       opacity: 0;
@@ -29,7 +29,7 @@
   }
   &:active {
     transform: translateY(-.3rem);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0rem .4rem .4rem rgba(0, 0, 0, 0.2));
   }
   &::before {
     content: "";
@@ -42,6 +42,27 @@
     top: 0;
     z-index: -1;
     transform: scale(1);
-    transition: all .5s ease 0s;
+    transition: $transition;
+  }
+}
+
+.btn-info {
+  display: inline-block;
+  font-weight: 700;
+  color: $colorBtn;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  letter-spacing: .2rem;
+  padding: 1.1rem .4rem 1.5rem .8rem;
+  border-bottom: 1px solid $colorBtn;
+  transition: $transition;
+  &:hover {
+    background: $colorBtn;
+    color: $colorLight;
+    filter: drop-shadow(0rem .4rem .4rem rgba(0, 0, 0, 0.2));
+    transform: translateY(-.2rem);
+  }
+  &:active {
+    transform: translateY(0rem);
   }
 }
