@@ -104,15 +104,15 @@ h6 {
 @font-face {
   font-family: Lato;
   font-display: swap;
-  src: url("../fonts/Lato-Bold.woff2") format("woff2"), url("../fonts/Lato-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/Lato-Light.woff2") format("woff2"), url("../fonts/Lato-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: Lato;
   font-display: swap;
-  src: url("../fonts/Lato-Light.woff2") format("woff2"), url("../fonts/Lato-Light.woff") format("woff");
-  font-weight: 300;
+  src: url("../fonts/Lato-Regular.woff2") format("woff2"), url("../fonts/Lato-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
@@ -125,10 +125,48 @@ h6 {
 @font-face {
   font-family: Lato;
   font-display: swap;
-  src: url("../fonts/Lato-Regular.woff2") format("woff2"), url("../fonts/Lato-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/Lato-Bold.woff2") format("woff2"), url("../fonts/Lato-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
+@font-face {
+  font-family: "icomoon";
+  src: url("../svgicons/icomoon.eot?nt8lnm");
+  src: url("../svgicons/icomoon.eot?nt8lnm#iefix") format("embedded-opentype"), url("../svgicons/icomoon.ttf?nt8lnm") format("truetype"), url("../svgicons/icomoon.woff?nt8lnm") format("woff"), url("../svgicons/icomoon.svg?nt8lnm#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-compass:before {
+  content: "\e900";
+}
+
+.icon-earth:before {
+  content: "\e901";
+}
+
+.icon-map:before {
+  content: "\e902";
+}
+
+.icon-way:before {
+  content: "\e903";
+}
+
 @keyframes leftToRight {
   0% {
     opacity: 0;
@@ -459,6 +497,64 @@ body {
   margin-bottom: 4rem;
 }
 
+.images-about {
+  position: relative;
+}
 .images-about__image {
-  width: 300px;
+  position: absolute;
+  width: 55%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  filter: drop-shadow(0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25));
+  transform: scale(1);
+  transition: all 0.5s ease 0s;
+  z-index: 5;
+  outline-offset: 1rem;
+}
+.images-about__image:hover {
+  transform: scale(1.1);
+  outline: 1rem solid #BA8554;
+  z-index: 10;
+}
+.images-about__image img {
+  width: 100%;
+  height: 100%;
+}
+.images-about__image:nth-child(1) {
+  top: 0;
+  left: 3rem;
+}
+.images-about__image:nth-child(2) {
+  top: 9rem;
+  right: 0;
+}
+.images-about__image:nth-child(3) {
+  top: 15.4rem;
+  left: 6rem;
+}
+.images-about:hover .images-about__image:not(:hover) {
+  transform: scale(0.95);
+}
+
+.advantage {
+  background: linear-gradient(90.05deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url("../img/advantage/advantage_bg.jpg") center/cover no-repeat;
+  padding: 21.5rem 0rem;
+  clip-path: polygon(100% 20%, 100% 100%, 0 80%, 0 0);
+}
+
+.item-advantage {
+  padding: 2.5rem 2.5rem 2.8rem 2.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  filter: drop-shadow(0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.1));
+  border-radius: 0.5rem;
+  transition: all 0.5s ease 0s;
+}
+.item-advantage:hover {
+  transform: translateY(-2rem) scale(1.03);
+}
+.item-advantage__icon {
+  margin-bottom: 2.4rem;
+}
+.item-advantage__title {
+  margin-bottom: 1rem;
 }

@@ -1,6 +1,7 @@
 @import "libs/reset";
 
-@import "fonts";
+@import "fonts/fonts";
+@import "fonts/iconfonts";
 
 @import "base/var";
 @import "base/mixin";
@@ -16,5 +17,6 @@
 @import "layout/grid";
 @import "layout/promo";
 @import "layout/about";
+@import "layout/advantage";
 
 @import "layout/footer";

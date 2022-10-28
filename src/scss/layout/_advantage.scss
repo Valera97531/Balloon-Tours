@@ -1,0 +1,24 @@
+@import "../base/var";
+
+.advantage {
+  background: linear-gradient(90.05deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url("../img/advantage/advantage_bg.jpg") center / cover no-repeat;
+  padding: 21.5rem 0rem;
+  clip-path: polygon(100% 20%, 100% 100%, 0 80%, 0 0);
+}
+
+.item-advantage {
+  padding: 2.5rem 2.5rem 2.8rem 2.5rem;
+  background: rgba($colorLight, .8);
+  filter: drop-shadow(0rem .4rem .4rem rgba(0, 0, 0, 0.1));
+  border-radius: .5rem;
+  transition: $transition;
+  &:hover {
+    transform: translateY(-2rem) scale(1.03);
+  }
+  &__icon {
+    margin-bottom: 2.4rem;
+  }
+  &__title {
+    margin-bottom: 1rem;
+  }
+}

@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../svgicons/icomoon.eot?nt8lnm');
+  src:  url('../svgicons/icomoon.eot?nt8lnm#iefix') format('embedded-opentype'),
+    url('../svgicons/icomoon.ttf?nt8lnm') format('truetype'),
+    url('../svgicons/icomoon.woff?nt8lnm') format('woff'),
+    url('../svgicons/icomoon.svg?nt8lnm#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-compass:before {
+  content: "\e900";
+}
+.icon-earth:before {
+  content: "\e901";
+}
+.icon-map:before {
+  content: "\e902";
+}
+.icon-way:before {
+  content: "\e903";
+}

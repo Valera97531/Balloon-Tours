@@ -58,4 +58,3 @@ export { deployFTP };
 
 // Выполнение сценария по умолчанию
 gulp.task('default', dev);
-
