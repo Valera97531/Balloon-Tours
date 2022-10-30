@@ -1,0 +1,123 @@
+@import "../base/var";
+
+.tours {
+  padding-bottom: 8.5rem;
+  &__title {
+    text-align: center;
+    margin-bottom: 8rem;
+  }
+  &__inner {
+    margin-bottom: 8rem;
+  }
+  &__wrapper_btn {
+    text-align: center;
+  }
+}
+
+.item-tours {
+  perspective: 150rem;
+  position: relative;
+  height: 520px;
+  &__side {
+    transition: all .8s ease 0s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0rem .4rem .4rem rgba(0, 0, 0, 0.25), 0rem .4rem .4rem rgba(0, 0, 0, 0.25), 0rem 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    border-radius: .5rem;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  &__img {
+    padding-bottom: 72%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+    overflow: hidden;
+    background-blend-mode: hard-light;
+    &_first {
+      background: $colorBtn url('../img/tours/tours1.jpg') center / cover no-repeat;
+    }
+    &_second {
+      background: $colorBtn url('../img/tours/tours2.jpg') center / cover no-repeat;
+    }
+    &_third {
+      background: $colorBtn url('../img/tours/tours3.jpg') center / cover no-repeat;
+    }
+  }
+  &__title {
+    position: absolute;
+    z-index: 5;
+    top: 17.6rem;
+    right: 0;
+    font-weight: 300;
+    font-size: 2.8rem;
+    line-height: 3.4rem;
+    letter-spacing: .2rem;
+    color: $colorLight;
+    text-align: right;
+    text-transform: uppercase;
+    & > span {
+      background: linear-gradient(90deg, #C3956A 3.65%, #A24F03 100%);
+      padding: .8rem 1.8rem .4rem 1.8rem ;
+      &:last-child {
+        position: absolute;
+        top: 3.6rem;
+        right: 0;
+        padding-bottom: .7rem;
+      }
+    }
+  }
+  &__info {
+    text-align: center;
+    max-width: 90%;
+    margin: 4.5rem auto 0rem;
+  }
+  &__text {
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    letter-spacing: .2rem;
+    border-bottom: 1px solid $colorText;
+    display: inline-block;
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+  &__hide {
+    padding: 0rem 2rem;
+    background: linear-gradient(156.85deg, #C3956A 3.65%, #A24F03 100%);
+    transform: rotateY(180deg);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  &__cost {
+    font-weight: 300;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    letter-spacing: .2rem;
+    color: $colorLight;
+    text-transform: uppercase;
+  }
+  &__price {
+    font-weight: 500;
+    font-size: 6rem;
+    line-height: 7.2rem;
+    letter-spacing: .2rem;
+    color: $colorLight;
+  }
+  &__btn {
+    transform: scale(.93);
+    & > a {
+      letter-spacing: .4rem;
+    }
+  }
+  &:hover &__vis{
+    transform: rotateY(-180deg);
+  }
+  &:hover &__hide {
+    transform: rotateY(0);
+  }
+}

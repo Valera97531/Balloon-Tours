@@ -131,8 +131,8 @@ h6 {
 }
 @font-face {
   font-family: "icomoon";
-  src: url("../svgicons/icomoon.eot?nt8lnm");
-  src: url("../svgicons/icomoon.eot?nt8lnm#iefix") format("embedded-opentype"), url("../svgicons/icomoon.ttf?nt8lnm") format("truetype"), url("../svgicons/icomoon.woff?nt8lnm") format("woff"), url("../svgicons/icomoon.svg?nt8lnm#icomoon") format("svg");
+  src: url("../img/icons/icomoon.eot?nt8lnm");
+  src: url("../img/icons/icomoon.eot?nt8lnm#iefix") format("embedded-opentype"), url("../img/icons/icomoon.ttf?nt8lnm") format("truetype"), url("../img/icons/icomoon.woff?nt8lnm") format("woff"), url("../img/icons/icomoon.svg?nt8lnm#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -246,6 +246,8 @@ body {
   border-radius: 5rem;
   transition: all 0.5s ease 0s;
   position: relative;
+  display: inline-block;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
 }
 .btn_animated {
   animation: btnToUp 1.4s ease 0.8s;
@@ -539,22 +541,233 @@ body {
 .advantage {
   background: linear-gradient(90.05deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url("../img/advantage/advantage_bg.jpg") center/cover no-repeat;
   padding: 21.5rem 0rem;
+  margin-bottom: 8rem;
   clip-path: polygon(100% 20%, 100% 100%, 0 80%, 0 0);
 }
 
 .item-advantage {
-  padding: 2.5rem 2.5rem 2.8rem 2.5rem;
+  padding: 2.5rem 2rem 2.8rem 2rem;
   background: rgba(255, 255, 255, 0.8);
   filter: drop-shadow(0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.1));
   border-radius: 0.5rem;
   transition: all 0.5s ease 0s;
+  text-align: center;
 }
 .item-advantage:hover {
   transform: translateY(-2rem) scale(1.03);
 }
 .item-advantage__icon {
+  display: inline-block;
   margin-bottom: 2.4rem;
+  font-size: 6rem;
+  background: linear-gradient(90deg, #C3956A 3.65%, #A24F03 100%);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 .item-advantage__title {
   margin-bottom: 1rem;
+}
+
+.tours {
+  padding-bottom: 8.5rem;
+}
+.tours__title {
+  text-align: center;
+  margin-bottom: 8rem;
+}
+.tours__inner {
+  margin-bottom: 8rem;
+}
+.tours__wrapper_btn {
+  text-align: center;
+}
+
+.item-tours {
+  perspective: 150rem;
+  position: relative;
+  height: 520px;
+}
+.item-tours__side {
+  transition: all 0.8s ease 0s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25), 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25), 0rem 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.item-tours__img {
+  padding-bottom: 72%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+  overflow: hidden;
+  background-blend-mode: hard-light;
+}
+.item-tours__img_first {
+  background: #BA8554 url("../img/tours/tours1.jpg") center/cover no-repeat;
+}
+.item-tours__img_second {
+  background: #BA8554 url("../img/tours/tours2.jpg") center/cover no-repeat;
+}
+.item-tours__img_third {
+  background: #BA8554 url("../img/tours/tours3.jpg") center/cover no-repeat;
+}
+.item-tours__title {
+  position: absolute;
+  z-index: 5;
+  top: 17.6rem;
+  right: 0;
+  font-weight: 300;
+  font-size: 2.8rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.2rem;
+  color: #ffffff;
+  text-align: right;
+  text-transform: uppercase;
+}
+.item-tours__title > span {
+  background: linear-gradient(90deg, #C3956A 3.65%, #A24F03 100%);
+  padding: 0.8rem 1.8rem 0.4rem 1.8rem;
+}
+.item-tours__title > span:last-child {
+  position: absolute;
+  top: 3.6rem;
+  right: 0;
+  padding-bottom: 0.7rem;
+}
+.item-tours__info {
+  text-align: center;
+  max-width: 90%;
+  margin: 4.5rem auto 0rem;
+}
+.item-tours__text {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  letter-spacing: 0.2rem;
+  border-bottom: 1px solid #777777;
+  display: inline-block;
+}
+.item-tours__text:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.item-tours__hide {
+  padding: 0rem 2rem;
+  background: linear-gradient(156.85deg, #C3956A 3.65%, #A24F03 100%);
+  transform: rotateY(180deg);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.item-tours__cost {
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  letter-spacing: 0.2rem;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.item-tours__price {
+  font-weight: 500;
+  font-size: 6rem;
+  line-height: 7.2rem;
+  letter-spacing: 0.2rem;
+  color: #ffffff;
+}
+.item-tours__btn {
+  transform: scale(0.93);
+}
+.item-tours__btn > a {
+  letter-spacing: 0.4rem;
+}
+.item-tours:hover .item-tours__vis {
+  transform: rotateY(-180deg);
+}
+.item-tours:hover .item-tours__hide {
+  transform: rotateY(0);
+}
+
+.reviews {
+  padding: 8rem 0rem;
+  background: linear-gradient(90.05deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url("../img/reviews/reviews_bg.jpg") center/cover no-repeat;
+}
+.reviews__title {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 8rem;
+}
+.reviews__inner {
+  max-width: 92rem;
+  margin: 0 auto;
+}
+.reviews__btn_wrapper {
+  text-align: center;
+}
+
+.item-reviews {
+  background: rgba(255, 255, 255, 0.8);
+  filter: drop-shadow(0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.1));
+  transform: skewX(-25deg);
+  margin-bottom: 8rem;
+}
+.item-reviews > * {
+  transform: skewX(25deg);
+}
+.item-reviews__wrapper {
+  max-width: 71rem;
+  margin: 0 auto;
+  padding: 5rem 0rem;
+  display: flex;
+  column-gap: 2rem;
+}
+.item-reviews__avatar {
+  flex: 0 0 16.5rem;
+  max-height: 16.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  shape-outside: circle(50% at 50% 50%);
+  -webkit-shape-outside: circle(50% at 50% 50%);
+}
+.item-reviews__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease 0s;
+}
+.item-reviews__name {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  letter-spacing: 0.2rem;
+  color: #ffffff;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.6s ease 0s;
+}
+.item-reviews__title {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+.item-reviews:hover .item-reviews__name {
+  opacity: 1;
+  pointer-events: visible;
 }
